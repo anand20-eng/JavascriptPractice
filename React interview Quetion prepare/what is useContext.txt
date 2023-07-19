@@ -1,0 +1,176 @@
+ Import React, { createContext } from 'react';
+ 
+ import ComA from './ComA';
+
+ const FirstName = createContext();
+ const LastName = createContext();
+
+cont App = () => {
+	return (
+		<> 
+		  <FirstName.Provider value={"thapa"}>
+		  <LastName.Provider value={"techinal"}>
+		   <ComA />
+		   </LatstName.Provider>
+		   </FirstName.Provider>
+		</>
+	)	
+}
+
+
+export defalut App;
+export { FirstName, LastName }
+
+// compB.js
+
+import React, { useContext } from 'react';
+import Comc from './Comc';
+import { FirtsName, LastName } form './App'
+
+const ComB = () => {
+	const fname = useContext(FirtName);
+
+	return (<>
+		 <h1>
+		  My name is {fname} {lname}
+		 </h1>
+		 </>
+		
+		)
+	
+
+}
+
+export defalut ComB;
+ 
+// comC.js
+
+import React from 'react'
+import  {FirstName, LastName } from './App'
+
+const ComC = () => {
+	return (
+		<> 
+		<FirstName.Consumer>
+		 {(fname) => {
+		return (
+			<LastName.Consumer>
+	       		  {(lname) => {
+		 	 return (	
+			<h1>
+			 My name is {fname} {lastname}
+				</h1>
+		 	 );
+		}}
+		  
+			 </LastName.Consumer>   
+		);
+
+		}}
+			</FirstName.Consumer>
+		</>
+	
+	)	
+}
+
+
+
+
+
+
+
+
+
+
+import { useState } from 'react';
+
+const userContext = createContext();
+
+
+function Component1() {
+
+const [user, setUser] = useState('jesse Hall'); 
+
+	return (
+	  <UserContext.Provider value={user}>
+	   <h1> {`Hello ${user}`}
+	  </UserContext.Provider>
+	);
+}
+
+function component2() {  
+   const [user, setUser] = useState('jesse Hall');
+    
+    return (
+	<> 
+	  <h1> COmponent 2<h2/>
+	</>	
+    ) 
+ 		
+}
+
+function Component3() {
+
+    return (
+	<>
+	  <h1> Component 3</h1>
+        </>	
+    
+   )
+}
+
+function Component4() {
+
+    return (
+	<>
+	  <h1> Component 4</h1>
+        </>	
+    
+   )
+}
+
+
+function Component5() {
+
+  const user = useContext(userContext);
+
+    return (
+	<>
+	  <h1> Component 5</h1>
+          <h2> {`Hello ${user} agian`} </h2>
+        </>	
+    
+   )
+}
+
+
+
+
+
+
+
+/// React Context 
+
+React Context is a way to manage state globally
+
+It can be used together with the useState Hook to share state betweeen
+deeply nested componets more easily than with useState alone
+
+
+-The solution .......
+
+Create Context 
+
+To create context, you must Import createContext and initilaize it
+
+import { useState, createContext } from 'react';
+
+const UserContext = createContext();
+
+
+
+Next We'll use the Context Provider to wrap the tree of components that need
+the state Context
+
+
+

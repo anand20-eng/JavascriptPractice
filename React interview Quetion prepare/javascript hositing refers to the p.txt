@@ -1,0 +1,115 @@
+ javascript hositing refers to the process whereby  the interpreter apperas to move 
+decalration of function, variables or classes to the top of theris scope 
+
+func1() 
+
+var func1 = () => {
+	console.log(''sdfdsf);
+}
+
+
+
+
+2) SetTimeout 
+
+The setTimeout() method calls a function after a number of milliseond
+
+3) Closure 
+
+A closure is a function having access to the parent scope, even after the 
+paretn function has closed
+
+function init() {
+
+var name = 'Moxilla'; // name is a local varialble created by init
+
+function displyName() {
+
+// displayName() is the inner function, a clsoure
+//  console.log(name); // use variable declared in the parent funciton
+}
+
+ displayName();
+}
+
+inti();
+
+
+
+
+function example1() {
+  for(var i = 0; i<3; i++) {
+	setTimeout(() => { console.log(i);}, 1000+i);
+
+  }
+
+}
+
+
+What is Bootstrap ?
+
+Bootstrap is HTML, CSS, and JS framework for building the rich web applicaon with minial effort
+
+
+
+
+
+
+
+Database ms is a softerware that is used to define, crete and mainti daat
+and proviees ca tod
+
+Rdbms 
+
+
+
+1) What is Primary key ?
+
+A primary key is a cloumn or a group of cloumsn in a table that uniquely idnetify the 
+rows of dat
+
+that refer to the primary key
+
+it is attribut and set of attributes that is refernto priamy keyu ame and anfadfldsfdsf;lkdfldsf
+any data changes the enter ui rnedr on virtuj dom 
+
+
+Real Dom =>    it can directly upadte HTML 
+virtula Dom =>  it can't direclty update the HTML
+Real Dom => create a new DOM if elelment update
+v =>   upate the jsx if elent upates
+r-- to much memory wastage.....
+v-- no memory wastage 
+
+r - it update slow
+v - it upafe faster 
+
+R - dom manipualtin is very expensi 
+v  dom manipatla i qjeay
+
+
+
+
+
+
+
+
+
+
+
+
+ var b = alfkjdslkflsad
+
+<a   paro={a} />
+
+React js is an open-soured fronted javascrpt libray which is used to build user interface
+and handle view layhfosadfds
+it folsdflcmldf afpsdfl
+
+
+
+
+
+
+
+

@@ -1,0 +1,122 @@
+var express = require("express");
+var mysql = require("mysql")
+var app= express()
+
+app.use(express.json) 
+
+const con= mysql.createConnection({
+	host:'localhost',
+	user: 'root',
+        password: 'root123',
+	database: 'newdb'
+
+}) 
+
+con.connect((err) => {
+	if(err) {
+		console.log(err)
+	}else{
+	
+	console.log("connected !!")
+	}
+})
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+///////////////////////////////
+
+
+const express = require(" express");
+
+const app = express();
+const port = 3004;
+
+//Routing
+
+app.get("/", (req, res) => {
+    res.send("Hello");
+};)
+
+// app.listen(port, (err) => {
+   if(err)
+      throw err
+    else 
+    console.log("Server is running at port %d:", port);
+ })
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

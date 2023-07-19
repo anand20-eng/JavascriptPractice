@@ -1,0 +1,86 @@
+
+(function () {
+	console.log(1);
+	setTimeout(function(){console.log(2)}, 1000);
+	setTimeout(function(){console.log(3)}, 0);
+	console.log(4);
+
+})();
+	
+
+
+Mountig upaditng unmouning 
+
+pure component  have recevied props only.and rnder 
+
+1) Promise    
+
+var x = new Promise((resovle, reject)=> {
+       if(success) resovle ('data');
+	if(err) reject('error';)
+})
+
+x.then((data) => {...})
+.catc((err) => {...})
+
+async function add(x,y){
+	let promise = sum(x,y)
+	let result = await promise 
+          return 
+}
+
+
+
+
+
+add(5, 10).then(z => consoel.log(z));
+
+
+
+
+const p1 = new Promise((rsovle, reject) => {
+
+resovle('resovled');
+})
+
+const p2 = new Promise(resovle, reject) => {
+     reject('rejected')
+}
+
+//Promise.all
+
+(async () => {
+	try{
+	     const promises = await Promise.all([p1, p2])
+	} catch(e) {
+	    console.log(e)//rejected
+	}
+
+})();
+
+1)  what way to reserver stirng
+2) write a program to check if a string is pallingrom or not ?
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

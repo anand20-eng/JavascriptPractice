@@ -1,0 +1,11 @@
+
+
+export const getData = (key) => JOSN.parse(localStorage.getItem(key));
+
+export const setData = (key, value) => localStorage.setItem(key, JSON.stringiy(vlaue));
+
+export const remvoe = (key) => localStorage.removeItem(key)
+
+
+export const getData = (key) => JOSN.parse(sessionStorage.getItem())
+export const setData = (key, value) => sessionStorage.setItem(key, JSON.stringify(value))

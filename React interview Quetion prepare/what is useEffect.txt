@@ -1,0 +1,55 @@
+1) What is useEffect and how to use it?
+
+The useEffect Hook allows you to perform side effect in your components.
+
+Some examples of side effects are: fetchig data, directly updating the 
+DOM, and timers.
+
+useEffect accepts two arguments. The second argument is optional
+
+useEffect(<function>, <dependecny>)
+
+1) NO dependency passed 
+
+useEffect(() => {
+  // Runs on every render	
+})
+
+useEffect(() => {
+  setTimeout(() => {
+	setCount((count) => count + 1);	
+  }, 1000)	
+})
+
+2) An empty array 
+
+useEffect(() => {
+// Runs only one the first render	
+}, []);
+
+3) Props or state values;
+
+Here is exmaple of a useEffect Hook that is dependent on varibale .
+if the count variable updates the effect will run agian
+
+useEffect(() => {
+// Runs on the first render
+// And any time any dependency value changes
+}, [prop, state])
+
+
+// Effect Cleanup
+
+some effect require cleanup to reduce memory leaks
+
+Timeouts, subscriptions. event listnerns and effect 
+
+
+
+
+
+
+
+
+
+

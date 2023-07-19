@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+    <h1>JavaScript Variables</h1>
+
+    <p>In this example, x, y, and z are undeclared.</p>
+    <p>They are automatically declared when first used.</p>
+
+    <p id="demo"></p>
+
+    <script>
+        function resultAll(arr) {
+            let result = 0;
+            for (let k = 0; k < arr.length; k++) {
+                console.log('arr.length =>', arr.length)
+                for (let m = 0; m < arr[k].length; m++) {
+                    console.log('arr[k].length =>', arr[k].length)
+                    // if (arr[k][m] > 60) result += (arr[k][m]);
+										// correct if( arr[ k ][ m ] % 2 == 1 ) result += ( arr[ k ][ m ] );
+										// if( arr[ k ][ m ] % 2 == 0 ) result += ( arr[ k ][ m ] );
+										// if( arr[k][m] % 2 != 1 ) result += ( arr[k][m] );
+										// if( arr[ k ][ m ] % 2 == 2 ) result += ( arr[ k ][ m ] );
+										if( arr[ k ][ m ] % 2 == 3 ) result += ( arr[ k ][ m ] );
+                    console.log('result =>', result)
+
+                }
+            }
+
+        }
+
+        resultAll([[56, 12], [23, 54], [22, 66, 88]]); // function call
+
+
+
+    </script>
+
+</body>
+
+</html>

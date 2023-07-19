@@ -1,0 +1,47 @@
+1) what is useRef Hook ?
+
+It create a mutable varibale which will not re-render the componets.
+
+to access a DOM element directly
+
+import React, {useState, useEffect, useRef } from 'react';
+
+const UseRef = () => {
+	
+    const [myDaa, setMyData] = useState('');
+    //const [count, setCount] = useState();
+
+   //const count = useRef(10) 
+    //console.log('count => ', count) 
+ 
+   const inputElem = useRef('');
+
+   const changeStyle = () => {
+	inputElem.current.style.backgroundColor = '#82E0AA';
+	inputElem.current.focus()		
+   }
+   // useEffect(() => {
+    // setCount(count + 1);	
+    //count.courrent = count.current + 1;
+    //});
+
+     return (
+	<> 
+	<input
+	 ref = {inputElem}
+	 type='text'
+	 value={myData}
+	onChange={(e) => setMyData(e.target.value)} />
+
+      //  <p> The number of times render: {count.current} </p>
+	
+	 <br />
+
+         <button onClick={changeStyle}> submit </button>
+         
+	</>
+	
+	
+     )
+   	
+}

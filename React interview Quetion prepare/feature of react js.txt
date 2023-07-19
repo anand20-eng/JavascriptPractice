@@ -1,0 +1,40 @@
+1) what is feature of react js
+
+1) JSX
+2) Component
+3) virtual DOM
+4) One-way-data-binding
+5) HighPerformance.
+
+
+1) JSX --
+
+- jsx is syntax extension to javascript
+- By using JSX, we can write HTML sturctues in same file that
+2) Component
+
+- Component are the building bloks of any React application, and single app usually consits of mulitple
+component...
+-  a singal app usually consists of multiple components
+- it splists the user interface into independent,
+ reusable parts that can be processed separetly....
+
+3) Virtual DOM : -  React keeps a lightweight representaion
+of the real DOM in the memory that is known as th virtual DOM
+
+when the state the state of an object changes, virutal DOM 
+change only that object in the real DOM rather thane updaitng all the object
+
+4) One-way-data-binding
+- React's one-way data binding keeps everything modular and fast. A unidirectional data flow means...that when desinging
+a React app, you often nest a child component within parent
+components..........
+
+you often nest child component with parent
+
+
+5) High performance: 
+
+React updates only those componets that have changes,
+rahter than updating all components at once.this restul in much faster web application
+

@@ -1,0 +1,147 @@
+virtual Dom - Changes can be made easily    
+Real Dom -  Changes can be expensive 
+virtual Dom - Minimum memeory wastage 
+Real Dom - High Demand for memory and more wastage
+virtual Dom - JSX element is updated if the element exists
+Real Dom  - Creates a new DOM every time an element gets updated
+virtual Dom - Can not update HTML direclty 
+Real Dom - Able to direclty manipulate HTML
+virtual Dom - faster updates
+Real Dom - slow update
+
+
+
+
+
+React is well known for developing and desingig complex mobile user interface and web appliacition
+
+3) what is virtual DOM 
+  A virtual DOM is a simple javaScript object that is the exact
+  copy of the correspongig real DOM
+
+  it can be considered as a node tree that conisits of element 
+and therei attribrs and other propeties
+
+Using the render funcion in React, it create a node tree and updates it based on the chages that occur in the data model 
+
+
+ 4) features of React ?
+
+ -React makes use of single-direction data flow model
+ - it deals with complete server side data processing and handing
+
+
+jsx
+
+return ( <> 
+		<h1>flaskdf</h2>
+	</>
+)
+
+
+
+
+
+
+Higher-order componnets(HOC) are a widely used techique in React for appling conepts that invovle the component reusablility logic
+
+
+user to easily resue the code and bootstap abstreaction
+
+hoc are also used to allow simple shaitgn of behaivoer acoress all fo the componets 
+
+Redux is used to store the state of the application in a single entity .
+This simple enittiy is usually a javascript object changing states can be done by pusing out acitons form 
+
+
+
+5) What are the components of Redux in React ?
+
+Redux conssits of four main components as shown below
+
+Action : An object that descibes  the call
+
+Reducers: The state change storage unit 
+Store: the state and object tree sotrage 
+View: Dispaly data prividd by steore
+
+
+
+
+
+{data.filter((item) => {
+	return search.toLowerCase() === '' 
+	? item : item.first_name.toLowerCase().includes(search);
+}).map((item) => {
+  <tr>
+   <td>{item.first_Name} </td>	
+   <td>{item.last_Name} </td>	
+   <td>{item.email} </td>	
+   <td>{item.phone} </td>	
+
+  </tr>
+
+})}
+
+
+
+<Form> 
+ <InputGroup classNmae='my-3'>
+ <Form.Control 
+    onChange={(e) => setSearch(e.target.value)}
+    placeholder='Search contacts' />
+  </InputGroup>
+</Form>
+
+
+
+
+
+
+
+
+{Users.filter((user)=> 
+user.first_name.toLowerCase().includes(query)
+)}
+
+
+
+
+
+
+
+
+
+
+
+const chekcPalindromeString = (string) => {
+     const len = string.length;
+   for(let i = 0; i< stirng.length/23; i++) {
+	if(string[i] !== string[len -1 -i])
+	return  'It is not a plaindrome number'	
+   }     
+	
+   return  'It is a plaindrome'
+}
+
+// take input
+const stirng = prompt('enter a string');
+
+// call the function 
+
+const value = checkPalindrome(checkPalindrome(string))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

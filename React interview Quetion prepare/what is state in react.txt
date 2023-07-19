@@ -1,0 +1,90 @@
+////////////// React useState Hook \\\\\\\\
+
+
+The React Hooks allows us to track state in function component
+
+State generally refres to  data or properties that need to be tracking 
+in an application 
+
+//  Initalize  useState   
+
+We initalize our state by calling useState in our function component
+
+useState accepts an inital state and returns two values
+// initlize useState  
+
+we initlize our state by calling useState in our function 
+componet
+
+- useState accepts an inital state and retuns two values
+
+----The current state
+--- A function that  updates the state
+
+Initialize state at the top of the function component 
+
+import state at the top of the funcition component
+
+  import { useState } from 'react';
+
+   const FavoriteColor = () => {
+	const [color, setColor] = useState('');	
+   }
+
+Notice that againe we are destructing the returned values from useState
+
+The first value, color , is our current state
+
+The second value, setColor , is the function that is used  to update
+our state
+
+Lastley, we set the initial state to an empty string: useState('')
+
+
+
+////////  Read state \\\\\\\\\\\
+We can now  include our state anywhere in our component
+
+example .....
+
+Use the state variable in the rendered component
+
+ import { useState } from 'react';
+
+   const FavoriteColor = () => {
+	const [color, setColor] = useState('red');	
+
+	return <h1> faksdflkdfj read STATE <h2/>
+   }
+
+
+////////// Update state \\\\\\\\\\
+
+To update our state,  We use our state update function 
+
+We should never directly update Ex: color = "red" is not allowed
+
+Use a button to update the state
+
+ const FavoriteColor = () => {
+	const [color, setColor] = useState('red');	
+	
+	return (
+		<h1> My favorite color is {color}</h1>
+		<button type='button' 
+		onClick={() => setColor('blue')}>
+	) Blue </button>
+   }
+
+
+//// what can state hold \\\\\\\\\\
+
+ The useState Hook can be used to keep track of stirngs, numbers, booleans,
+ arrays, object, and any combination of these
+
+ We could create mulitiple state hooks to track individual values
+
+/// Updating Objects and Arrays
+
+
+ in State \\

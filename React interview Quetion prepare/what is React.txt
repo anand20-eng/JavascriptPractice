@@ -1,0 +1,49 @@
+1) what is React ?
+
+React is a javascript library for buidling user interfaces
+
+React is used to build singal-page application 
+
+React allows us to create reusable UI components
+
+2) what is arrow function ?
+
+Arrow function allow us to write shorter function syntax
+
+3) what about this funciton 
+
+--- The handling of this is also different in arrow funciton compared to
+regular funciton 
+
+In short with arrow function there is no bindig of this 
+
+4) what is useContext ?
+
+ - React Context is a way to manage state globally 
+ - It can be used together with the useState Hook to share state between
+    deeply nested components more easily than with useState alone
+
+-   To do this without contex, we will need to pass the state as 
+  props through each nested component This is called 'prop drilling'
+ 
+
+
+
+s
+
+
+
+
+
+
+
+- in arrow funciton therer is no binding of this
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,132 @@
+export interface LoginResponseI  {
+   userId: number,
+   token: string,
+   roleName: string,
+   message?: string
+}
+
+
+const  initialState: LoginResponseI  = {
+  token = '',
+  roleName: '',
+  meesage: '',
+  userId: 0
+}
+
+
+
+
+
+
+const authenticaltionReducer = (state: LoginResponseI = initalState, action: {type: string; payload: any}) {
+    switch(action.type) {
+	case LOGIN_SUCCESS || REGISTRATION_SUCCESS;
+		sessionStorage.setItem('appToken', action.payload.token);
+		state = action.payload
+		return state;
+      	case LOGIN_FAILED:
+      		state.message = action.payload;
+      		return state;
+       case LOGOUT:
+       		state = initalState
+		sessionStorae.remove('appToken')
+		return state;
+       defalut: 
+    }
+
+}
+
+export defalut authenticationReducer
+
+
+
+
+
+
+
+
+export const registrationAction = () => {
+    return function (dispatch: any){
+    dispatch('registration', values).then(response => {
+ 	dispatch(registrationSuccess(response.data))
+    }).catch(error => {
+       dispatch(registrationFailed(error.response.data));
+       toast.error(error.response.data.message)
+   })
+	
+   }
+
+}
+export const LOGIN_START = 'LOGIN_START';
+
+
+export const loginSuccess = () => ({ type: LOGIN_START });
+
+export const loginSuccess = (message: any) => {
+ {type : LOGIN_SUCCESS, palyload: message }
+}
+
+export const loginFailed = (message: any) => ({
+   type:LOGIN_FAILED , payload: message
+})
+
+
+
+///////////////// with javascript
+
+export const INITAL_STATE = {
+    patientUS: [],
+    currentPateintId: 0,
+    id: 0
+
+}
+export const SIGNUP_SUCCESS = 'SIGNUP_SUCCESS';
+
+import { SIGNUP_SUCCESS } from '../Auth/cons'
+
+
+export const signUpReducer = (signUp = INITAL_STATE, action) => {
+    switch(action.type) {
+       case SIGNUP_SUCCESS:
+	return {...signUp.userInfo, signUp: {email: action.email }}	
+	defalut: 
+	 return signUp
+   }
+}
+
+
+
+
+
+
+
+
+
+
+
+////////////////////////////////
+
+
+import axios from 'axios';
+axios.defalut.baseURL = 'http://localhost:5000/'
+
+
+////////////////////////
+
+const hanldeClick = (values: any) => {
+ dispatch(loginAction({ email: values.email, password: values.password}));
+
+}
+
+
+case UPDATE_ROLE: 
+  state.roles = state.roles.map((role) => {
+    if(role.roleId === action.payload.roleName){
+	role.roleName = action.payload.roleName	
+   }	
+    return {...role }
+ })
+
+
+
+ 

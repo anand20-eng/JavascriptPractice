@@ -1,0 +1,116 @@
+<img src={require('./images/profile/profile.png ').defalut}>
+
+ <div className='main'>
+   <div className='sub-main'>
+ 	  <div>
+	    <div className="imgs">
+	     <div className="container-image">
+	      <img src={profile} alt="profile" className="profile" />
+	</div>
+	<div>
+	<h1>Login Page	</h1>
+        <div>
+   <img src={email} alt="email" className="email" />
+   <input type="text" placeholder='user name'
+	 className='name'>
+	</div>
+	<div className="second-input"> 
+<img src={profile} alt="profile" className="pass" />
+   <input type="text" placeholder='user name'
+	 className='name'>
+	</div>
+         <div className="login-button">
+	<button> Login </button>
+        </div>
+	</div>
+  </div>
+  </div>
+
+
+.main{
+ text-align: center;
+ justify-content: center;
+ display: felx;
+ padding: 90px 0 90px 0;
+ background-color: rgb(252, 252, 252);
+} 
+
+.sub-main{
+	display: flex;
+ 	justify-content: center;
+	height: 550px;
+	widht: 35%;
+	box-shadow: 11px 12px 12px 12px rgb(207, 207, 207);
+        padding-top: 30px;
+	border-radius: 60px;
+	background-color: white;
+}
+
+.imag{
+     padding-top: 20px;
+     justify-content: center;
+     diplay: flex
+ }
+ .container-image{
+	background-color: rgb(223, 221, 221);
+	border-radius; 150px;
+	align-item: center;
+	display: flex;
+	height: 115;
+	widht:115;
+ }
+ .profile{
+	height: 100px;
+	width: 100px;
+	border-radius:130px
+  }
+ input{
+	width: 300px;
+	height: 50px;
+	border-radius: 60px;
+	box-shadow: inset 0px 0px 25px 0px #888;
+	border: none;
+	outline: none;
+	background-color: #fff;
+ } 
+
+ .email{
+	height:25px;
+	widht: 25px;
+	position: absolute;
+	padding: 14px 0 0 25px;
+}	
+.name{
+     padding-left: 70px;
+     font-size: 20px;
+}
+.second-input{
+	padding-top:20px	
+ }
+ 
+ button{
+	width:380px
+	height:50px;
+	border-radius: 60px;
+	backgorund-color: #b103fc;
+ 	color: white;
+	font-size: 25px;
+	border:none;
+ }	
+ .login-button{
+   padding-top: 25px;
+ }
+ .link{
+       font-size: 30px;
+	font-weight:40;	
+ }
+
+ a{
+    color: blue;	
+	
+ }
+
+
+
+
+	

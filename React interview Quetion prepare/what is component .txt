@@ -1,0 +1,14 @@
+what is component ?
+
+- A piece of code that can resue like function 
+- but more powerfult than function
+- two type of function
+- class and functinal component 
+- 
+
+class component ?
+
+A Component that has E6 class
+More Complex and powerfult than functinal component
+Because it has a lifecyle methodh and state 
+No need to use Hooks 

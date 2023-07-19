@@ -1,0 +1,116 @@
+
+   function sum(a,b) {
+	add = a+ b;
+	console.log(add);
+   }
+
+   sum(10, 10)
+
+
+
+  impot React, { useState } frp, 'react';
+  const TimeDateComp = () -> {
+
+ 	let time = new Date().toLocaleTimeString();
+        const [ctime, setTime] = useState(time)'
+        
+        const updateTime = () => {
+	 time = new Date().toLocaleTimeString();
+	 setTime(time);
+	}
+ 
+         setIntervalTime(updateTime, 1000)
+       return(
+	 <> 
+	
+	  <h1> {ctime} </h1>		
+	</>
+	
+	)
+
+   }
+
+  export deflaut TimeDateComp;
+
+
+
+
+
+
+
+
+
+
+
+
+import React from 'react';
+
+const UseEffectAPI = () => {
+
+    return (
+	<>
+	<h2> List of GitHub Users </h2>
+	<div className= 'container-fluid mt-5'>	
+           <div className='row text-center'>          
+		<div className= 'col-10 col-md-4 mt-5'>
+	         <div class='card p-2'>
+		<div class="d-flex align-items-center">
+               <div class='image'> <img src={avatar-url} class="rounded" width="155"/></div>
+		<div class="ml-43 w-100">
+		 <h4 class="mb-0 mt-0 textLeft"> Thapa </h2> <span className="textLeft">
+                   Web Developer </span>
+                <div class="p-2 mt-2 bg-primary d-flex justify-content-between rounded text-white stats">
+	       <div class="d-flex flex-column"> <span class="articles"> Articles </span>
+             <span class="number1"> 38 </span
+ <div class="d-flex flex-column"> <span class="followers"> followers </span>
+             <span class="number2"> 980 </span>
+
+
+<div class="d-flex flex-column"> <span class="Rating"> Rating </span>
+             <span class="number3"> 8.9 </span>
+
+
+		
+	   <h1> hi UseEffect </h1>
+	 </div>	
+	 </>
+	
+    )
+}
+
+export default UseEffectAPI;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

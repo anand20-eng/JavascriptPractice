@@ -1,0 +1,38 @@
+what is useMemo ?
+To increase the performance of application ......usememo
+
+import React, {useState, useMemo } from 'react';
+
+const Memo = () => {
+   const [myNum, setMyNum] = useState(0);
+   const [show, setShow] = useState(flase);
+   
+   const getValue = () => {
+	return setMyNum(myNum + 1)
+   }
+   const countNumber = (num) => {
+    console.log('file: Memo.jsx', num);
+    for (let i = 0; i =< 100000000; i++) {}
+     return num;	
+   }
+   
+   const checkData = countNumber(myNum);
+
+  // const checkData = useMemo(() => {
+//	return counterNumber(myNum);	
+  // }, [myNum])
+   
+   return (
+	<>
+	<button onClick={getValue} style={{backgroundColor: 'red'}}>
+	  Counter
+	 </button>	
+         <p> My new number : {checkData} </p>
+	  <button onClick={() => setShow(!show)}>
+	  {show ? 'you clicked me' : 'click me plz'}
+	 </button>
+	</>
+   )
+}
+
+export defalut Memo; 

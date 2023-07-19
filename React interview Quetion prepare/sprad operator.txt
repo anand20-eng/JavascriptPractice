@@ -1,0 +1,205 @@
+
+1) React uses ES6;
+
+
+1) classes 
+2) Arrow function 
+3) variables(let, const, var)
+4) Array Method like .map()
+5) Destructing 
+6) Modules
+7) Ternary Operator
+8) Spread Opearotor
+
+
+8) Spread Opearotor
+
+The spread opeartor is often is used in combination with destructiong
+
+
+const numbersOne = [1,2,3];
+const numbersTwo = [4,5,6]
+
+const numbesCombined = [...numbersOne,  ...numbersTwo];
+
+const numbers = [1, 2, 3, 4, 5, 6];
+
+const [one, two, ...rest] = numbers;
+
+
+const myVechicle = {	
+    brand : 'Ford',
+    model : 'Mustang',
+    color:  'red'
+}
+
+cont updateMyVechicle = {
+     type: 'car',
+     year: '2021',
+     color: 'yellow'
+}
+
+
+cont myUpdateVechicle = { ...myVechilce , ...updateMyVechicle};
+
+
+}
+
+cont updateMyVechicle = {
+	brand : 'Ford',
+    	model : 'Mustang',
+    	color:  'red'
+     	type: 'car',
+     	year: '2021',
+     	color: 'yellow'
+}
+
+5) Destructing 
+
+const vechicles = ['mustang', 'dsfa', 'dsfa'];
+
+const [car, truck, vechicles] = vechicles
+
+const [car,  , suv] = vehicles;
+
+Destructing comes in handy when a function reutrn an 
+
+array:
+
+
+function calculate (a,b) {
+ const add = a+b;
+ const sub = a -b;
+ cont mul  = a * b;
+ const div = a /b;
+
+  return [add, sub, mul, div];
+}
+
+const [add, sub, mul, div] = calculate(4, 7);
+
+
+const vehicleOne = {
+  brand: 'Ford',
+  model: 'Mustang',
+  type: 'car',
+  year: 2021, 
+  color: 'red'
+}
+
+myVechicle(vechicleOne);
+
+
+function({type, color, brand, model}) {
+   const message = type + color + brand + model ;
+}
+
+p {
+   border-top-style: dotted;
+   border-right-style: solid;
+   border-bootom-style: dotted;
+   border-letf-style: solid;
+}
+
+div {
+   border: 1px solid black;
+   padding: 25px 50px 75;
+}
+
+input[type=submit]:hover {
+	background-color : #45A09;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+const vehicleOne = {
+  brand: 'Ford',
+  model: 'Mustang',
+  type: 'car',
+  year: 2021, 
+  color: 'red',
+  registration: {
+    city: 'Houston',
+    state: 'Texas',
+    country: 'USA'
+  }
+}
+
+
+myvehicles(vehicleOne);
+
+const myVechicle =({model, resgistration: {state} }) => {
+   const message = model + state 	
+}
+
+
+////////////Colors       \\\\\\\\\\
+
+1) RGB  //red green blue
+2) HEX  // hexa
+3) HSL /// huge stauration light
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,98 @@
+what is context api ?
+
+React Context API allows you to eaisly access data at different
+levles of the component tree, without passing prop to every level
+
+
+
+
+
+
+
+
+app.js 
+
+
+import React, {createContext, useContext } from 'react';
+import Child from './Child';
+import OtherChild from './OtherChild'5
+
+export const GloblaInfo = createContext()
+
+function App() {
+  const [color, setColor] = useState('green')
+  return (
+	<GobalInfo.Provider value={{ appColor: color, getDay: getDay }}>
+	 <div> 
+	<h1> App COmponent </h1>
+	 </Child>
+	</div>
+
+	</GoblaInfo.Provider>	
+	
+ )
+}
+
+
+///////Child.js
+
+import React, { useContext } from 'react';
+import { GobalInfo } from './App'
+
+function Child(){
+   const { appColor } = useContext(GobalInfo)'
+   console.warn('appColor', appColor)	
+   return (
+	<>
+	 <h1 style={{color:appColor}}>Child Component </h1>
+	 </>
+	
+	) 
+}
+
+export defalut Child;
+
+//import React, {useContext} from 'react';
+//import { GobalInfo } from './App';
+
+function SuperChild() {
+ const { appColor, getDay } = useContext(GobalInfo);
+  return (
+	<>
+	<h1 style={{color: appColor}}> SuperChild Component </h1>
+	<button onClick={() => getDay(day)}> Click ME </button>
+	
+       </>	
+	
+   )
+}
+
+export default SuperChild;
+
+
+
+
+//import React, {useContext} from 'react';
+//import { GobalInfo } from './App';
+
+function OtheChild() {
+ const { appColor } = useContext(GobalInfo);
+  return (
+	<>
+	<h1 style={{color: appColor}}> SuperChild Component </h1>
+	
+       </>	
+	
+   )
+}
+
+export default OtherChild;
+
+
+
+
+
+
+
+
+

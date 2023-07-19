@@ -1,0 +1,127 @@
+var mysql = require('mysql');
+
+var connection = mysql.createConnection({
+  host: 'localhost',
+  user: 'root',
+  password; '',
+  database: 'nodeapp'
+})
+
+connection.connect((err => {
+   if(err) throw err;
+   console.log('conected');
+})
+
+module.exports = connection
+
+
+
+
+var express = require('express');
+var router = express.Router();
+
+router.get('/', function (req, res, next) {
+     res.send('respond wiht a resource')
+})
+
+module.exports = router;
+
+//////////////////// app.js
+
+car createErrro = require('http-errors');
+var express = require('express');
+var path = require('path');
+var cookieParser = require('cookie-parese');
+var logger = require('moran')
+
+var indexRouter = require('./routes/index');
+var usersRouter = require('./routes/users');
+var productRouter = require('./routes/product')
+
+//////////////////  View engine setup 
+
+app.set('view', path.join(_dirname, 'views'));
+app.set('view engine', 'hbs')
+app.use(logger('dev'));
+
+app.use(express.json());
+
+app.use(express.urlencoded({ extended: false }));
+app.use(express.static(patch.join(_dirname, 'pubilc')));
+
+app.use('/', indexRouter);
+app.use('/users', userRouter)
+app.use(./product, productRuter)
+
+//////////////////// catch 404 and forward to errro handler
+
+app.use(function((req, res, next)) {
+
+}
+
+/////////////////// product.js
+
+var express = require('express');
+var router = express.Router()
+var db = require('../db');
+
+var bodyParse = require('body-parser');
+
+ router.use(bodyParser.json());
+
+  ////  router.use(bodyParser.urlencoded({extended: true }));
+
+/////  Get users listing 
+
+router.get('/', function(req, res, next) {
+   var sql = 'SELECT * FROM  products WHERE active = 1;
+   db.query(sql, function (err, rows, fields) {
+	if(err) {
+		res.status(500).send({error: 'Something failed'})
+	}
+        res.status(500);
+   })
+})
+
+router.get('/:id', function(req, res, next) {
+ var id = req.params.id;
+ var sql = `SELECT * FROM products WHERE id = ${id}`;
+ db.query(sql, function(err, row ,fields) {
+  if(err) {
+     res.status(500).send({ error: 'Something failed'})	
+  }
+  res.json(row[0])
+})
+})
+
+
+router.post('/create', function (req, res, next) {
+  var name = req. body.name ;
+  var sku  = req.body. sku;
+  var price = req.body.price;
+ 
+  var sql = `INSERT INTO products (name, sku, price, acitve created_at) VALUES("${name}", "${sku}", ${price}",
+1, NOW());`
+db.query(sql, function (err, result) {
+   if(err) {
+      res.status(500).send({error: 'something failed')}
+  }
+  res.jon({status: 'success', id: result.insertId})
+})
+})
+
+
+router.get('/', function(req, res, next) {
+    res.send('responde with a resource');
+});
+
+module.exports = router
+
+
+
+
+
+
+
+
+

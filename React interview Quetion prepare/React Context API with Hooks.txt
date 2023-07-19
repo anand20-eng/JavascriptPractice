@@ -1,0 +1,32 @@
+React Context API with Hooks      
+
+-- what is Context APi ?
+-- why do we need hooks for context API ?
+--  Make child component
+-- Child to parent data communication
+-- Example
+/--------------------------
+
+virtual DOM ->
+
+
+changes can be made easily  
+
+Minimal memory watage 
+
+jsx element is updated if the elmement exist
+
+can't update HTML directly  
+
+faster updates
+
+
+
+------------------------------
+
+what is virtual Dom 
+
+- is a simple javascript object that is exact 
+copy of the corresponging  real DOM.........
+
+

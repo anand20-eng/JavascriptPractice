@@ -1,0 +1,36 @@
+const handleChange = (e) => {
+	setFormData({...formData, [e.target.name]: e.target.value})
+}
+
+export const addUser = (user) =>{
+  async(dispatch, state) => {
+     try {	
+	const respone = await addData(user);
+        dispatch(addUserSuccess(response.message))
+     }	catch(error) {
+	dispatch(addUserErrro(error.message));
+     }
+
+ }	
+
+
+
+
+ export const addData = (value) => {
+	const thenMethod = (resovle, reject) => {
+	   const localData = localStorage.getItem.key()
+	   const Person = localData ? JSON.parse(localData) : []
+	  
+	}
+}
+
+
+
+
+
+
+
+
+
+
+}

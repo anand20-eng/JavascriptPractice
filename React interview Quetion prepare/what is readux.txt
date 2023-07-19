@@ -1,0 +1,7 @@
+const incNumber = () => {
+	return {
+		type: ""INCREMENT"
+	}
+}
+
+const incNumbre = () => { type :"INCREMNT"}

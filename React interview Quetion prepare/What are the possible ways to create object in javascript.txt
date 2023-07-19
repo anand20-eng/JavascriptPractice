@@ -1,0 +1,55 @@
+What are the possible ways to create objects in javascript ?
+
+--  1) Object constructor
+  - The simplest way to create an empty object is using the Oject costructor.
+   Current this approach is not recommended 
+
+   var object = new Object();
+
+    2)   Object's ceate method
+        
+        The create method of Object creates a new object by passeing
+    the prototype object as a parameter  
+        var object = Object.create(null)   
+
+    3)  Object literal syntax
+
+     The object syntax (or object intiaizer) is a comma, separated set of
+      name-value pairs wrapped in curly braces
+        var object = {
+             name: 'sudheer',
+	     age: 34,
+	};
+   
+      Object literal property values can be of any data type , including
+      array, function . and nested object
+
+     Note: this is an easiest way to create to object
+
+    4)  Function constructor
+     
+	Create any Funciton and apply the new operator to create object 	instance
+
+      function Person (name) {
+	this.name = name
+        this.age = 21;
+      }
+
+     var object = new Person(Sudheer)
+    5)  Function constructor with prototype
+
+    This is simlar to function constructor but is uses proptotype for 
+   thier properties and methods 
+  
+    function Person () {}
+    Person.prototype.name = 'Sudheer';
+    var object = new Person(); 	
+
+      
+
+ 
+    6)  ES6 class syntax
+    7) Singleton pattern
+   
+
+   

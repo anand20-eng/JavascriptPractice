@@ -1,0 +1,114 @@
+////////////////
+
+A promise is a javascript object that links producing code and consuming code
+-- producing COde => is code that can take some time 
+-- Consuming code  is code that must wait for the result..
+
+const key = 'users'
+
+
+const getData = () => {
+   return new Promise((resovle, reject) => {
+       const localData = localStorage.getItem(key);
+       const users = localData ? JSON.parse(localData) : [];
+       resovle(locaData)	
+   })
+
+}
+
+
+
+
+
+
+////////  update user 
+
+<Button type = "button" onClick={() => {
+  navigate(`/update/${user.id}`) }} > Edit </Button> </td >
+
+}}>
+
+
+
+
+
+
+const addData = (value) => {
+
+}
+
+/////////
+
+const update = (id, user) => {
+  const localData = localStorage.getItem(key);
+  const user = localData ? JSON.parse(localData) : [];
+  
+  const updateData = user.map((item)=> {
+       if(item.id == id) {
+	  item.firstName = user.firstName;
+	  item.lastName  = user.lastName
+       }
+      return item;
+  })
+	localStorage.setItem(key, JSON.stringify(newData))
+	resovl({message : 'user update'})
+
+}
+
+
+
+const deleteUser = (id) => {
+	return new Promise ((resove, reject) => {
+	const getBooks = localStorage.getItem(key);
+        const allBooks	= getBooks ? JSON.parse(getBooks) : [];
+ 	const deleteBooks = allBooks.filter(value => value.id !== id);
+	localStorage.setItem(key, JSON.stringigy(removeData));
+	resovle9({message : "delete data"})
+	})	
+}
+  
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+export const addData = (value) => {
+	return new Promise((resovle, reject) => {
+	const localData = localStorage.getItem(key);
+	const persons = localData ? JSON.parse(localData) : [];
+	value.id = persons.length + 1;
+        persons.push(value);
+        localStorage.setItem(key, JOSN.stringify(persons));
+	resovle({ message : 'data saved', data: value)}
+	})
+}
+
+
+
+
+
+
+

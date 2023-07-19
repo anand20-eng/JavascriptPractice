@@ -1,0 +1,71 @@
+what is callback Hook ?
+
+- return memoized function 
+
+
+imort { useCallback, useState } from 'react';
+import Todos from './components/Todos';
+
+const CallbackHook = () => {
+ const [coount, setCount] = useState(0)
+ const [todos, setTodos]  = useState(['new todos'])
+
+const increment = () => {
+setCount(count + 1);	
+}
+
+//const addTodo = useCallback(() => {
+  // setTodos((prev) => [...prev, 'newEntery'])
+
+//}, [Todos]);
+
+ // const addTODO = () => {
+   //  setTodos((prev) => [...prev, 'new Entry'])	
+ // };
+
+  return (<> 
+	<Todos todos={todos} addTodo={addTodo} />
+	 <hr/>
+	 
+          <div> 
+		count: {count}
+	     <button onClick={increment}> + </button>
+	  </div>
+	
+	
+   </>)
+}
+
+export defalut Callbackhook;
+
+/////////////////
+
+Todos.js 
+
+import {memo} from  'react'
+
+const Todos = ({ todos, addTodos}) => {
+	
+  console.log('child render');
+ 
+  return (	
+	  <> 
+	  <h2> MyTodos </h2>
+	 {tods.map((todo, index) => {
+	
+	   return <p key={index}> {todo + index} </p>
+	})}
+	
+	<button onClick={addTodo}> Add Todo </button>
+   	  </>	
+	
+  )
+}
+
+export defalut memo(Todos);
+
+
+
+
+
+

@@ -1,0 +1,194 @@
+<html>
+
+<body>
+  <p id="demo"></p>
+
+  <script>
+    // var employee1 = { firstName: "John", lastName: "Rodson" };
+    // var employee2 = { firstName: "Jimmy", lastName: "Baily" };
+
+    // function invite(greeting1, greeting2) {
+    //   console.log(
+    //     greeting1 + " " + this.firstName + " " + this.lastName + ", " + greeting2
+    //   );
+    // }
+
+    // invite.call(employee1, "Hello", "How are you?"); // Hello John Rodson, How are you?
+    // invite.call(employee2, "Hello", "How are you?"); // Hello Jimmy Baily, How are you?
+
+    // invite.apply(employee1, ['Hello', 'how are you'])
+
+    // var inviteEmployee2 = invite.bind(employee1);
+    // console.log('inviteEmployee2')
+    // inviteEmployee1("Hello", "How are you?"); 
+
+
+    ////////Hosting
+
+    // console.log('24', message); //output : undefined
+    // var message = "The variable Has been hoisted";
+
+    // var message;
+    // console.log('27',message);
+    // message = "The variable Has been hoisted";
+
+    // message("Good morning"); //Good morning
+
+    // function message(name) {
+    //   console.log(name);
+    // }
+
+    ///////////////////////////// Closures
+    // 
+
+
+    // const promise = new Promise(
+    //   (resolve) => {
+    //     setTimeout(() => {
+    //       resolve("I'm a Promise!");
+    //     }, 1000);
+    //   },
+    //   (reject) => {}
+    // );
+
+    // promise.then((value) => console.log(value));
+    // <button> click<button>
+    //   const myobj = {name:'john', age: 31, city: 'new York'};
+    //   const myJSON = JSON.stringify(myobj);
+    //   console.log(' line no 57 myJSON =>', myJSON)
+    //   localStorage.setItem('testJSON',myJSON);
+
+    //   /// Retrieving data
+
+    // let text = localStorage.getItem('testJSON');
+    // console.log('getData =>', text);
+    // document.getElementById("demo").innerHTML = text.name;
+    //   let obj = JSON.parse(text);
+    // document.getElementById("demo").innerHTML = obj.name;
+
+    //  console.log('obj get', obj)
+
+
+
+    // function Welcome(name) {
+    //      var greetingInfo = function(message) {
+    //      console.log(message + " " + name);
+    //      };
+    //       return greetingInfo;
+    // }
+
+    // var MyFunction = Welcome('john');
+
+    // MyFunction('Welcome');
+    // MyFunction('Hello Mr.');
+
+    /// Hoisting
+
+    // console.log('console log first', message); //output : undefined
+    // var message = "The variable Has been hoisted";
+
+    // var message;
+    // console.log('with variable',message);
+    // message = "The variable Has been hoisted";
+
+    // message2("Good morning"); //Good morning
+
+    // function message2(name) {
+    //   console.log('with function',name);
+    // }
+
+    // 
+    // function firstFunction() {
+    //   // Simulate a code dely 
+    //   setTimeout(function() {
+    //     console.log('first function called');
+    //   }, 1000);
+    // }
+    //   function secondFunction () {
+    //     console.log('second function called')
+    //   }
+
+    //   firstFunction()
+    //   secondFunction()
+
+    // var pattern = /you/;
+    // console.log(pattern.test("How are you?")); //true
+
+    // function sum(a,b) {
+    // 	add = a+ b;
+    // 	console.log(add);
+    //    }
+
+    //    sum(10, 10)
+  //   function init() {
+  //     var name = 'Moxilla'; // name is a local varialble created by init
+  //     function displayName() {
+
+  //       // displayName() is the inner function, a clsoure
+  //       //  console.log(name); // use variable declared in the parent funciton
+  //     }
+
+  //     displayName();
+  //   }
+
+  // inti();
+
+  //   console.log('closures =>',   inti())
+//   function f (a, b, c) {
+//   m = ['1','2','3'];
+//   a = 3;
+//   b[0] ='x';
+//   c.first = false
+
+// }
+
+// var x = 4;
+// var y = ["A","B","C"];
+// var z = {first: true };
+
+// f(x, y, z);
+
+// console.log( x, y , z);
+
+// console.log(' 144 html')
+// const c = ( function () {
+// 	console.log('1',1);
+// 	setTimeout(function(){console.log('2',2)}, 1000);
+// 	setTimeout(function(){console.log('3',3)}, 0);
+// 	console.log('4',4);
+
+// })();
+
+// program to check if the string is palindrome or not
+
+function checkPalindrome(string) {
+
+// find the length of a string
+const len = string.length;
+
+// loop through half of the string
+for (let i = 0; i < len / 2; i++) {
+
+    // check if first and last string are same
+    if (string[i] !== string[len - 1 - i]) {
+        return 'It is not a palindrome';
+    }
+}
+return 'It is a palindrome';
+}
+
+// take input
+const string = prompt('Enter a string: ');
+
+// call the function
+const value = checkPalindrome(string);
+
+console.log('value 186 line number=>',value);
+
+	
+
+
+  </script>
+</body>
+
+</html>

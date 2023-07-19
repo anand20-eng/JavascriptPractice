@@ -1,0 +1,274 @@
+Using memo will casue React to skip rendering a component if its props
+have not changed
+
+This can improve performance
+
+
+import React, { useState } from "react";
+ import Todos from "./todos";
+
+const DemoOfMemo = () => {
+
+	const [count, setCount] = useState(0);
+	const [todos, setTodos] = useState(['todo 1', 'todo 2', 'todo3'])
+	
+	const increment = () => {
+	 setCount((c) => c + 1);
+	}
+	
+	return (
+	<> 
+		<Todos todos={todos} />
+        {console.log('DemoOfMemo Component')}
+		<div>
+		 <div>Count:{count}  </div>
+		<button onClick={increment}> + </button>
+		</div>
+			
+	</>
+	)
+
+}
+export default DemoOfMemo;
+When you click the incrment button, the Todos component re-renders
+
+If this component was comples, it could cause perfomranc issues
+
+=== =>  Solution 
+
+To fix this we can use memo  
+
+Use memo to keep the Todos component from needlessly re-rendering 
+
+Wrap the Todos componet export in memo
+
+
+import React from "react";
+import { memo } from "react";
+
+const Todos = ({ todos }) => {
+    console.log('child render');
+
+	return (
+		<> 
+		<h2> my todos </h2>
+		{todos.map((todo, index) => {
+		   return <p key={index}> {todo} </p>		
+		})}
+		</>
+	)
+	
+}
+
+
+//  export default Todos;
+ export default memo(Todos);
+
+
+
+
+
+The React useState Hook allows us to track state in funciton 
+component  
+State generally refers to data or propeties that need to be
+tracking in an application
+
+ 
+const root = ReactDom.createRoot(document.getElementById('root'));
+
+root.render(<App />)
+
+Todos.js :
+
+const Todos = ({ todos }) => {
+    console.log('child render');
+
+	return (
+		<> 
+		<h2> my todos </h2>
+		{todos.map((todo, index) => {
+		   return <p key={index}> {todo} </p>		
+		})}
+		</>
+	)
+	
+}
+
+
+export defalut Todos;
+
+
+
+
+
+
+2) what is three ... dots ? (Rest and Spread Operator)
+
+  /// ES6   
+
+  // Rest & Spread Operator  
+
+
+1) Rest Operator
+function addNumber(a,b,c,...other) {
+	console.log(other);
+	return a+b+c;
+}
+
+const res = addNumber(2,5,6);
+console.log('res =>', res);
+
+// Varibale are combined  in rest operator
+
+ 
+2) Spread Operator 
+
+var names = ["Ajay", "Anuj", "vivek"];
+
+function getNames(name1, name2, name3) {
+
+  console.log(name1,name2, name3);
+}
+
+getNames(names[0], names[1],names[2]);
+
+getNames(...names);
+
+
+////////////// Object with Rest operator
+
+
+var students = {
+	name: "Ajay",
+	age: "28",
+	hobbies: ["Cricket", "Singing"]
+
+}
+ 
+// const age = students.age;
+
+const { age,...rest} = studnets;
+const {...rest } = students
+
+console.log(rest);
+
+
+///  Spread 
+
+var newStudent = {
+ 	
+	...studnets,
+	age: "29"
+}
+
+console.log(newStudent)
+
+
+/////////////// spread opertor object ke sath or array sath
+use karthey he
+let x = [1,2,3];
+let y = [...x, 4,5,6];
+
+console.log(y);
+
+sparad operator expand array values 
+
+/////////or     rest operator used with function
+
+
+  const myData = (name, age,...otherInfo) => {
+	console.log(otherInfo);
+	
+  }
+
+  myData('a','d','dfad','df','dfaf','adsf','afdd');
+  mearge array value   while using array value
+
+
+
+
+
+
+const CompA = ({name, handleClick}) => {
+
+	return (
+	<>
+	<div>Component A </div>
+	<h4> Name is {name} </h4>
+       <button onClick={() => handleClick()}> Toggle Name 	</button>
+	</>
+		
+		
+	)
+}
+
+export defalut CompA
+
+
+const CompB  = ({name}) => {
+
+
+
+	return (
+	<h4> Name is {name} </h4>
+
+		<div>Component B </div>
+	)
+}
+
+export defalut CompB
+
+
+import logo from './logo.svg'
+import CompA from './CompA';
+import CompB from './COmpB;'
+function App() {
+
+const [name, setName] = useState('john');
+
+  funciton handleClick() {
+	if(name === 'john') {
+	   setName('Alan')
+	} else {
+	    setName(''john) 
+	}	
+  }
+	
+	return (
+		<div className = 'App'>
+		Hellow world 
+		<CompA name={name} handleClick={handleClick}/>
+		<CompB />
+		</div>
+	);
+	
+}
+
+expot defalut Ap
+p
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+

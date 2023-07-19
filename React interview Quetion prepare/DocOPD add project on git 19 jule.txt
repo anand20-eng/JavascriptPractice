@@ -1,0 +1,14 @@
+
+git blash
+git init
+git aad .
+
+git commit -m "Initial commit"
+
+git status
+
+git remote add origin github link ssh link add
+
+git push origin master
+
+git push origin master --force

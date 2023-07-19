@@ -1,0 +1,50 @@
+what is javascript ?
+
+javascript is an interpreted, client-side, event-based, obbject-oriented scripting language
+
+
+what is HTML ?
+
+HTML stands for Hyper text mark up language  
+it gives structure to the webpage
+
+
+
+
+
+
+   <div className='main'>
+   <div className='sub-main'>
+
+  
+ ////////////
+css
+
+.main{
+ text-align: center;
+ justify-content: center;
+ display: felx;
+ padding: 90px 0 90 0;
+}
+
+.sub-main{
+	display: flex;
+ 	justify-content: center;
+	height: 550px;
+	widht: 35%;
+	box-shadow: 11px 12px 12px 12px rgb(207, 207, 207)
+}	
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
